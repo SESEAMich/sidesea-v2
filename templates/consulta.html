@@ -1,0 +1,85 @@
+{% extends 'base.html'%} {# Herencia #}
+
+{% block content %}
+{{ super() }}
+<div id="seccion-consulta-denuncias" class="uk-section pde-bg-1 uk-padding-small">
+    <div class="uk-container">
+        
+            <div uk-grid>
+                <div class="uk-width-2-3">
+                    <p>Aquí podrás consultar el detalle de tus denuncias.</p> 
+                </div>
+                <div class="uk-width-1-3 uk-flex uk-flex-right">
+                    <form class="uk-search uk-search-default">
+                        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                        <input class="uk-search-input" type="search" placeholder="Buscar folio" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+
+        <div class="uk-overflow-auto">
+
+            <div>
+                <div uk-grid>
+                    <div class="uk-width-auto@m">
+                        <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+                            <li><a href="#">Presentadas</a></li>
+                            <li><a href="#">Por expirar</a></li>
+                            <li><a href="#">Turnadas</a></li>
+                            <li><a href="#">Prevenidas</a></li>
+                            <li><a href="#">Sin respuesta</a></li>
+                            <li><a href="#">Concluida</a></li>
+                            <li><a href="#">Desechadas</a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-width-expand@m">
+                        <ul id="component-tab-left" class="uk-switcher">
+                            <li>
+                                <table class="uk-table uk-table-hover uk-table-small uk-table-divider">
+                                    <thead>
+                                        <tr>
+                                            <th class="uk-table-small">Folio</th>
+                                            <th class="uk-table-small">Descripción</th>
+                                            <th class="uk-width-small">Fecha de presentación</th>
+                                            <th class="uk-table-shrink uk-text-nowrap">Última actualización</th>
+                                            <th class="uk-table-shrink uk-text-nowrap">Fase</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a class="uk-link-reset"
+                                                    href="/denuncia-detalle">0002-20230415-QSH27</a>
+                                            </td>
+                                            <td class="uk-table-link">
+                                                <a class="uk-link-reset" href="/denuncia-detalle">Ejercicio ilícito de
+                                                    servicio público</a>
+                                            </td>
+                                            <td class="uk-text-truncate">
+                                                <a class="uk-link-reset" href="/denuncia-detalle">2023/03/08</a>
+                                            </td>
+                                            <td class="uk-text-nowrap">
+                                                <a class="uk-link-reset" href="/denuncia-detalle">2023/03/09</a>
+                                            </td>
+                                            <td class="uk-text-nowrap">
+                                                <a class="uk-link-reset" href="/denuncia-detalle">No iniciado</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.</li>
+                            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur, sed do eiusmod.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

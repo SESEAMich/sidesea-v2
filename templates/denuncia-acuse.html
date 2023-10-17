@@ -1,0 +1,23 @@
+{% extends 'base.html'%} {# Herencia #} 
+{% block content %} 
+{{ super() }}
+<div  id="seccion-formulario-denuncias"  class="uk-section pde-bg-1 uk-padding-small">
+  <div class="uk-container">
+
+    <h3 class="pde-text-anton">Denuncia presentada</h3>
+    
+    <p>Tu denuncia se ha presentado exitosamente en el Sistema de Denuncia Pública de Faltas Administrativas y Hechos de Corrupción. El estatus del trámite de la denuncia podrá se consultado en cualquier momento con el folio asignado.</p>
+    <p>Folio: <strong>SESEA-0001-11012023-8C6Y3</strong><br>
+    Fecha de presentación: <strong>11/07/2023 14:59:41 h</strong><br>
+    Motivo de la denuncia: <strong>Me solicitaron dinero para agilizar el trámite de placas y licencia de conducir</strong>
+    </p>
+    <p uk-margin>
+        <button class="uk-button uk-button-primary" onclick="location.href='/'">Nueva denuncia</button>
+        <button class="uk-button uk-button-secondary" onclick="location.href='/denuncia-detalle'">Ver detalles</button>
+    </p>
+
+  </div>
+</div>
+
+
+{% endblock %}

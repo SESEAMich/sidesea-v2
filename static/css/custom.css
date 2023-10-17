@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+:root {
+  --color-1: #d8e7eb;
+  --color-2: #2e4a52;
+  --color-3: #b4cfd6;
+  --color-4: #102429;
+}
+
+.pde-bg-1{
+	background: var(--color-1) !important;
+}
+.pde-bg-2 {
+	background: var(--color-2);
+}
+
+.pde-bg-3{
+	background: var(--color-3);
+}
+
+.pde-bg-4{
+	background: var(--color-4);
+}
+
+.pde-text-anton {
+	font-family: Anton !important;
+}
+
+#footer{
+	border-top: 1px #c9c9c9 solid;
+}
+
+.pde-active-s{
+	font-size: 2rem !important;
+}
+
+/*.uk-table-hover tbody  :hover{
+	background: var(--color-3) !important;
+}*/
+
+nav{
+	box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.21);
+}

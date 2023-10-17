@@ -1,0 +1,62 @@
+{% extends 'base.html'%} {# Herencia #} 
+{% block content %} 
+{{ super() }}
+
+<div  id="seccion-formulario-denuncias"  class="uk-section pde-bg-1 uk-padding-small">
+  <div class="uk-container">
+
+    <h3 class="pde-text-anton">¿Qué deseas hacer?</h3>
+    <div class="uk-child-width-1-3@s uk-grid-match uk-text-center" uk-grid> 
+        <div>
+            <a href="/servidor">
+                <div class="uk-card uk-card-hover uk-card-body">
+                    <h1 class="uk-card-title">
+                        <span uk-icon="icon: user; ratio: 3.5"></span>
+                    </h1>
+                    <h3 class="uk-card-title">Denunciar a un servidor público o particular</h3>
+                </div>
+            </a>
+        </div>
+        <div>
+             <a href="/responsable">
+                 <div class="uk-card uk-card-hover uk-card-body">
+                   <h1 class="uk-card-title">
+                     <span uk-icon="icon: question; ratio: 3.5"></span>
+                   </h1>
+                   <h3 class="uk-card-title">Denunciar a quien resulte responsable</h3>
+                 </div>
+        </a>
+      </div>
+      <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+          <h1 class="uk-card-title">
+            <span uk-icon="icon: warning; ratio: 3.5"></span>
+          </h1>
+          <h3 class="uk-card-title">Realizar una alerta ciudadana</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-section pde-bg-3 uk-padding-small">
+  <div class="uk-container">
+    <div class="uk-child-width-1-2@s uk-grid-match uk-text-center uk-grid-collapse" uk-grid>
+      <div>
+          <a href="/consulta-faltas">
+              <div class="uk-card uk-card-hover uk-card-body">
+                  <h4> Consultar las faltas administrativas graves y no graves</h4>
+              </div>
+          </a>
+      </div>
+      <div>
+          <a href="/consulta-delitos">
+              <div class="uk-card uk-card-hover uk-card-body">
+                  <h4>Consultar los delitos por hechos de corrupción</h4>
+              </div>
+          </a>
+      </div>
+  </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html'%} {# Herencia #} 
+{% block content %} 
+{{ super() }}
+<div id="seccion-consulta-denuncias" class="uk-section pde-bg-1 uk-padding-small">
+    <div class="uk-container">
+        <h3 class="pde-text-anton">Preguntas Frecuentes</h3>
+
+        <ul uk-accordion="collapsible: false">
+            <li>
+                <a class="uk-accordion-title" href="#">¿Qué puedo denunciar en esta Plataforma?</a>
+                <div class="uk-accordion-content">
+                    <p>En esta plataforma podrás denunciar presutnos hechos de corrupción o faltas administrativas de los Servidores Públicos en ejercicio de sus funciones en el ámbito Estatal y Municipal, así como de los particulares que sean personas físicas o morales vinculados con faltas administrativas graves.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">¿Qué no puedo denunciar en este Sistema de denuncias?</a>
+                <div class="uk-accordion-content">
+                    <p>Trámites, servicios, asuntos laborales y conflictos entre particulares.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">¿Quién lleva el trámite de mi denuncia?</a>
+                <div class="uk-accordion-content">
+                    <p>Una vez recibida tu denuncia, la misma será turnada por este sistema a la autoridad competente, de conformidad a lo dispuesto en el artículo 37, fracción XIII de la Ley del Sistema Estatal Anticorrupción para el Estado de Michoacán, autoridad que será la encargada de dar el trámite correspondientes hasta la conclusión de la misma.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">¿Cuáles son las faltas administrativas que puedo denunciar?</a>
+                <div class="uk-accordion-content">
+                    <p>Puedes denunciar aquellos actos relacionados con faltas administrativas, que la ley clasifica como graves y no graves, las cuales se encuentran previstas en el Capítulo I y II del título Tercero específicamente los artículos 49 y 51 de la Ley de Responsabilidades Administrativas para el Estado de Michoacán de Ocampo. Asímismo, podrás denunciar aquellos actos de particulares vinculados a Faltas Administrativas graves, los cuales se encuentran contemplados en el artículo 65 del Capítulo III del título Tercero de la ley referida.</p>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+{% endblock %}

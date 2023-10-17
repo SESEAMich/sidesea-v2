@@ -1,0 +1,271 @@
+{% extends 'base.html'%} {# Herencia #}
+{% block content %}
+{{ super() }}
+<div id="seccion-formulario-denuncias" class="uk-section pde-bg-1 uk-padding-small">
+  <div class="uk-container">
+    <div id="paso-tres">
+      <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+        <div>
+          <h3 class="pde-text-anton">Folio: {{ datos.folio }} </h3>
+        </div>
+        <div>
+          Estado: <span class="uk-label">Default</span>
+          Fase: <span class="uk-label">No iniciada</span>
+        </div>
+      </div>
+      <h6 class="pde-text-anton uk-heading-line uk-text-left"><span>Información de/los denunciado/s</span></h6>
+      <article class="datos-servidorpublico uk-comment uk-comment-primary" role="comment">
+        <header class="uk-comment-header">
+          <div class="uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-expand">
+              <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Juan Luis Pérez
+                  Becerra</a></h4>
+              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                <li>Servidor Público</li>
+                <li>Director Obras Públicas</li>
+                <li>Obras Públicas</li>
+                <li>Ayuntamiento de Morelia</li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="uk-comment-body">
+          <p class="uk-text-meta">Tez morena clara, cabello negro, corto, lacio, frente mediana, cejas pobladas rectas,
+            unidas, ojos medianos iris café claro, nariz recta, de base mediana, boca mediana de labios gruesos, mentón
+            cuadrado, cara redonda, pabellones auriculares ovalados con lóbulos descendentes, bigote y barba sin
+            rasurar.</p>
+        </div>
+      </article>
+      <h6 class="pde-text-anton uk-heading-line uk-text-left"><span>Información de el/los Particulare/s
+          vinculado/s</span></h6>
+      <article class="datos-particular uk-comment uk-comment-primary" role="comment">
+        <header class="uk-comment-header">
+          <div class="uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-expand">
+              <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Alfredo Valencia</a></h4>
+              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                <li>Particular Vinculado</li>
+                <li>Propietario</li>
+                <li><span uk-icon="nut"></span> Multisistemas VALCER S.A. de C.V.</li>
+                <li><span uk-icon="location"></span> Batallón de Matamoros 84-A, Chapultepec Sur, C.P. 58260, Morelia,
+                  Michoacán</li>
+                <li><span uk-icon="phone"></span> 443 265 5544</li>
+                <li><span uk-icon="mail"></span> contacto@multisis.mx</li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="uk-comment-body">
+          <p class="uk-text-meta">Tez morena clara, cabello negro, corto, lacio, frente mediana, cejas pobladas rectas,
+            unidas, ojos medianos iris café claro, nariz recta, de base mediana, boca mediana de labios gruesos, mentón
+            cuadrado, cara redonda, pabellones auriculares ovalados con lóbulos descendentes, bigote y barba sin
+            rasurar.</p>
+        </div>
+      </article>
+      <h6 class="pde-text-anton uk-heading-line uk-text-left"><span>Información de los hechos</span></h6>
+      <article class="datos-particular uk-comment uk-comment-primary" role="comment">
+        <header class="uk-comment-header">
+          <div class="uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-expand">
+              <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Hechos</a></h4>
+              <p class="uk-heading-line"><span>Lugar y fecha</span></p>
+              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                <li><span uk-icon="clock"></span> Hechos sucedidos el 25 de diciembre de 2022, a las 18:30 horas</li>
+                <li><span uk-icon="location"></span> Hechos sucedidos en Zacapu Michoacán</li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="uk-comment-body">
+          <p class="uk-heading-line"><span>Narración de los hechos</span></p>
+          <p class="uk-text-meta">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.</p>
+          <p class="uk-text-meta">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+          <p class="uk-text-meta">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+            velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+            voluptatem.</p>
+          <p class="uk-text-meta">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+            laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+          <p class="uk-text-meta">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et
+            accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+            quos dolores et quas.</p>
+        </div>
+        <p class="uk-heading-line"><span>Medios probatorios</span></p>
+        <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+          <li><span uk-icon="users"></span> Testigos: Andrés Navarro García; Huberto López Zambrano</li>
+          <li><span uk-icon="file-text"></span> Existe un documento el cual contiene acuerdos sobre el lavado de dinero
+          </li>
+          <li><span uk-icon="crosshairs"></span> El documento probatorio se localiza en la Delegación Administrativa de
+            la SESEA</li>
+        </ul>
+        <p class="uk-heading-line"><span>Evidencias</span></p>
+        <ul class="uk-list">
+          <li><span uk-icon="file-pdf"></span> Documento 1</li>
+          <li><span uk-icon="file-text"></span> Documento 2</li>
+          <li><span uk-icon="file"></span> Documento 3</li>
+        </ul>
+      </article>
+
+      <dl>
+        <dt>Denuncia presentada</dt>
+        <dd>Se ha presentado la denuncia el 27/09/2023 a las 14:30 horas.</dd>
+        <dt>Denuncia Turnada</dt>
+        <dd>El titular de la Unidad de Denuncia ha turnado la denuncia a la autoridad de "Ayuntamiento de Zamora" el
+          27/09/2023 a las 15:00 horas.<br><a class="uk-link-muted" href="#"><span uk-icon="file-pdf"></span>
+            Acuerdo</a></dd>
+        <dt>Documento Adjunto</dt>
+        <dd>"Ayuntamiento de Zamora" ha adjuntado un documento: <br><a class="uk-link-muted" href="#"><span
+              uk-icon="file-pdf"></span> Nómina</a></dd>
+      </dl>
+
+      <!--Botones-->
+      <p uk-margin>
+        <button class="uk-button uk-button-secondary" type="button" uk-toggle="target: #modal-adjuntar">Adjuntar Archivo</button>
+        <button class="uk-button uk-button-secondary" type="button" uk-toggle="target: #modal-prevenir">Prevenir</button>
+        <button class="uk-button uk-button-danger" type="button" uk-toggle="target: #modal-turnar">Turnar</button>
+        <button class="uk-button uk-button-default" id="js-modal-confirm">Desechar</button>
+        <button class="uk-button uk-button-primary">Generar PDF</button>
+      </p>
+    </div>
+    <!--FIN PASO 3-->
+  </div>
+</div>
+
+
+<div id="modal-turnar" uk-modal>
+  <div class="uk-modal-dialog">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Turnar denuncia</h2>
+    </div>
+    <div class="uk-modal-body">
+      <form class="uk-form-stacked">
+        <div class="uk-margin">
+          <div class="uk-form-label">Elija una opción:</div>
+          <div class="uk-form-controls">
+            <label><input class="uk-radio" type="radio" name="radio1"> Ayuntamiento</label><br>
+            <label><input class="uk-radio" type="radio" name="radio1"> Órgano Autónomo</label><br>
+            <label><input class="uk-radio" type="radio" name="radio1"> Entidad paraestatal</label>
+          </div>
+        </div>
+        <div class="uk-margin">
+          <label class="uk-form-label" for="form-stacked-select">Elija un ente público:</label>
+          <div class="uk-form-controls">
+            <select class="uk-select" id="form-stacked-select">
+              <option>Fiscalía Anticorrupción</option>
+              <option>Ayuntamiento de Aguililla</option>
+            </select>
+          </div>
+        </div>
+        <div class="uk-margin" uk-margin>
+          <div uk-form-custom="target: true">
+            <input type="file" aria-label="Custom controls">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="Acuerdo" aria-label="Custom controls"
+              disabled>
+          </div>
+          <button class="uk-button uk-button-default">Cargar</button>
+        </div>
+        <div class="uk-margin" uk-margin>
+          <div uk-form-custom="target: true">
+            <input type="file" aria-label="Custom controls">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="Oficio" aria-label="Custom controls"
+              disabled>
+          </div>
+          <button class="uk-button uk-button-default">Cargar</button>
+        </div>
+        <div class="uk-margin">
+          <div class="uk-form-controls">
+            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Agregue una nota">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+      <button class="uk-button uk-button-primary" type="button">Turnar</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="modal-prevenir" uk-modal>
+  <div class="uk-modal-dialog">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Prevenir denuncia</h2>
+    </div>
+    <div class="uk-modal-body">
+      <form class="uk-form-stacked">       
+        <div class="uk-margin" uk-margin>
+          <div uk-form-custom="target: true">
+            <input type="file" aria-label="Custom controls">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="Acuerdo" aria-label="Custom controls"
+              disabled>
+          </div>
+          <button class="uk-button uk-button-default">Cargar</button>
+        </div>
+        <div class="uk-margin" uk-margin>
+          <div uk-form-custom="target: true">
+            <input type="file" aria-label="Custom controls">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="Oficio" aria-label="Custom controls"
+              disabled>
+          </div>
+          <button class="uk-button uk-button-default">Cargar</button>
+        </div>
+        <div class="uk-margin">
+          <textarea class="uk-textarea" rows="3" placeholder="Especifique los motivos para que el denunciante realice sus correcciones" aria-label="Textarea"></textarea>
+      </div>
+      </form>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+      <button class="uk-button uk-button-primary" type="button">Prevenir</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-adjuntar" uk-modal>
+  <div class="uk-modal-dialog">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Adjuntar documento</h2>
+    </div>
+    <div class="uk-modal-body">
+      <form class="uk-form-stacked">     
+        <p>El documento que adjunte será añadido expediente de elementos probatorios de la denuncia</p>  
+        <div class="uk-margin" uk-margin>
+          <div uk-form-custom="target: true">
+            <input type="file" aria-label="Custom controls">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="Documento" aria-label="Custom controls"
+              disabled>
+          </div>
+          <button class="uk-button uk-button-default">Cargar</button>
+        </div>
+      </form>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+      <button class="uk-button uk-button-primary" type="button">Adjuntar</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  UIkit.util.on('#js-modal-confirm', 'click', function (e) {
+    e.preventDefault();
+    e.target.blur();
+    UIkit.modal.confirm('¿Está seguro que desea deshechar la denuncia?').then(function () {
+      console.log('Confirmed.')
+    }, function () {
+      console.log('Rejected.')
+    });
+  });    
+</script>
+
+
+{% endblock %}

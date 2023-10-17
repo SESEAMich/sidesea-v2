@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ datos.titulo }}</title>
+   
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/css/uikit.min.css" />
+    <link href="{{ url_for('static', filename='css/custom.css')}}" rel="stylesheet" type="text/css">
+
+    <!-- Tipografía -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+    <!-- UIkit JS --> 
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script> 
+
+    <!-- JS --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+    <script src="{{ url_for('static', filename='js/formulario-denunciado.js')}}"></script> 
+    
+</head>
+<body>
+
+    {% block header %}
+<header> 
+    <!-- Navbar -->
+    <div uk-sticky="start: 200; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent">
+      <nav class="uk-navbar-container pde-bg-1">
+        <div class="uk-container">
+          <div uk-navbar>
+            <div class="uk-navbar-left">
+              <div>
+                <div class="uk-panel uk-padding uk-padding-remove-bottom"> <a class="uk-logo" href="#" aria-label="Back to Home"> <img src="{{ url_for('static', filename='imgs/pde-logo-horizontal.png')}}" width="230" height="90" alt=""></a> </div>
+              </div>
+              <ul class="uk-navbar-nav">
+                <li class=""><a href="#">SESEA</a></li>
+                <li><a href="#">PDN</a></li>
+                <li><a href="#">Más información</a>
+                  <div uk-dropdown>
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                      <li class="uk-active"><a href="#">Normatividad</a></li>
+                      <li><a href="#">Aviso de Privacidad</a></li>
+                      <li><a href="#">Transparencia</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="uk-navbar-right">
+              <ul class="uk-navbar-nav">
+                <li><a href="#" class="pde-text-anton">S1</a></li>
+                <li><a href="#" class="pde-text-anton">S2</a></li>
+                <li><a href="#" class="pde-text-anton">S3</a></li>
+                <li><a href="#" class="pde-text-anton">S4</a></li>
+                <li class="uk-active"><a href="/" class="pde-text-anton pde-active-s">S5</a></li>
+                <li><a href="#" class="pde-text-anton">S6</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="uk-subnav uk-flex uk-flex-center@m uk-flex-right@l" uk-margin style="margin-bottom: 5px;">
+            <li><a href="/" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: home" ></span>Inicio</a></li>
+            <li><a href="#modal-media-video" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: youtube" ></span>Tutorial</a></li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span>Material multimedia</a>
+              <div class="uk-width-large" uk-dropdown="mode: hover">
+                <ul class="uk-nav uk-dropdown-nav">
+                  <li class="uk-nav-header">Guías Ciudadanas</li>
+                  <li><a href="#">Faltas Administrativas Graves y No Graves</a></li>
+                  <li><a href="#">Delitos por hechos de corrupción</a></li>
+                  <li class="uk-nav-divider"></li>
+                  <li><a href="#">Instructivo</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="/preguntas"><span class="uk-margin-small-right" uk-icon="icon: question"></span>Preguntas frecuentes</a></li>
+            <li><a href="/consulta"><span class="uk-margin-small-right" uk-icon="icon: search"></span>Consultar denuncia</a></li>
+            <li><a uk-toggle="target: #offcanvas-overlay"><span class="uk-margin-small-right" uk-icon="icon: sign-in" ></span>Acceso</a></li>
+          </ul>
+          
+          <!--
+          <div class="uk-flex uk-flex-center@m uk-flex-right@l">
+              <div class="uk-button-group ">
+                  <button class="uk-button uk-button-secondary pde-bg-3"><span class="uk-margin-small-right" uk-icon="icon: youtube"></span>Tutorial</button>
+                  <button class="uk-button uk-button-secondary pde-bg-3"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span>Guías ciudadanas</button>
+                  <button class="uk-button uk-button-secondary pde-bg-3"><span class="uk-margin-small-right" uk-icon="icon: question"></span>Preguntas frecuentes</button>
+                  <button class="uk-button uk-button-secondary pde-bg-3"><span class="uk-margin-small-right" uk-icon="icon: search"></span>Consultar denuncia</button>
+                  <button class="uk-button uk-button-secondary pde-bg-3"><span class="uk-margin-small-right" uk-icon="icon: user"></span>Cuenta</button>
+              </div>
+          </div>--> 
+        </div>
+      </nav>
+    </div>
+      <div id="modal-media-video" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+      <button class="uk-modal-close-outside" type="button" uk-close></button>
+      <video src="https://pdeanticorrupcion.michoacan.gob.mx/s5/img/tutorial.mp4" width="1920" height="1080" controls playsinline uk-video></video>
+    </div>
+  </div>
+  </header>
+
+
+<div id="offcanvas-overlay" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <h3>Regístrate</h3>
+        <form action="/login" method="POST">
+          <div class="uk-margin">
+            <input class="uk-input uk-form-small" type="text" placeholder="Usuario" aria-label="Input" name="usuario">
+          </div>
+          <div class="uk-margin">
+            <input class="uk-input uk-form-small" type="text" placeholder="Constraseña" aria-label="Input" name="contrasenia">
+          </div>
+          <p uk-margin>
+            <button class="btn-enviar-denuncia uk-button uk-button-text"><span uk-icon="arrow-right"></span> Iniciar sesión</button>
+          </p>
+          <a class="uk-link-text uk-text-small" href="/registro">Si aún no tienes cuenta, da clic aquí.</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="uk-section pde-bg-3 uk-padding-small">
+    <div class="uk-container">
+      <div class="uk-grid-small" uk-grid>
+        <div class="uk-width-1-5 uk-text-left"> <img src="{{ url_for('static', filename='imgs/pde-logo-s6.png')}}" alt=""/> </div>
+        <div class="uk-width-4-5 uk-flex uk-flex-middle">
+          <h2 class="pde-text-anton">S5. Sistema de Denuncia Pública, de Faltas Administrativas y Hechos de Corrupción (SIDESEA)</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
+
+{% block footer %}
+
+
+<footer id="footer" class="pde-bg-4 uk-light uk-text-meta">
+    <div class="uk-container uk-padding">
+      <div class="uk-child-width-1-3@m uk-child-width-1-1@s" uk-grid>
+        <div>
+          <h5 class="pde-text-anton">SESEA</h5>
+          <a href="https://sistemaanticorrupcion.michoacan.gob.mx/"><strong>Secretaría Ejecutiva</strong> del Sistema Estatal Anticorrupción</a>
+          <p>Texto</p>
+        </div>
+        <div>
+          <h5 class="pde-text-anton">Aviso de Privacidad</h5>
+          <div class="uk-margin-small" uk-grid> <a href="">Aviso de privacidad 1</a> <a href="">Aviso de privacidad 2</a> </div>
+        </div>
+        <div>
+          <h5 class="pde-text-anton">Contacto</h5>
+          <address>
+          Artilleros de 1847, #640-1<br>
+          Col. Chapultepec Sur, C.P. 58260<br>
+          Morelia, Michoacán.<br>
+          <br>
+          contacto@seseamichoacan.mx<br>
+          (443) 298 4009
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="uk-container uk-container-expand pde-bg-2 uk-light uk-padding-remove">
+      <div class="uk-text-center uk-padding-small uk-text-meta"><strong>Secretaría Ejecutiva</strong> del Sistema Estatal Anticorrupción. &copy;Todos los derechos reservados. </div>
+    </div>
+  </footer>
+{% endblock %}
+
+</body>
+
+</html>

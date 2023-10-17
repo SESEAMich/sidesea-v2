@@ -1,0 +1,150 @@
+{% extends 'base.html'%} {# Herencia #} 
+{% block content %} 
+{{ super() }}
+<div id="seccion-formulario-denuncias" class="uk-section pde-bg-1 uk-padding-small">
+    <div class="uk-container">
+        <p>Aquí podrás denunciar las faltas administrativas graves, no graves y hechos de corrupción en coherencia a lo
+            establecido por la Ley de Responsabilidades Administrativas para el Estado de Michoacán.</p>
+
+        <!--INICIO PASO 1-->
+        <div id="paso-uno">
+            <h3 class="pde-text-anton">1 ¿A quién vas a denunciar?</h3>
+            <article class="datos-servidorpublico uk-comment uk-comment-primary" role="comment" hidden>
+                <header class="uk-comment-header">
+                  <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                    <div class="uk-width-expand">
+                      <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Juan Luis Pérez Becerra</a></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                        <li>Servidor Público</li>
+                        <li>Director Obras Públicas</li>
+                        <li>Obras Públicas</li>
+                        <li>Ayuntamiento de Morelia</li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                <div class="uk-comment-body">
+                  <p class="uk-text-meta">Tez morena clara, cabello negro, corto, lacio, frente mediana, cejas pobladas rectas, unidas, ojos medianos iris café claro, nariz recta, de base mediana, boca mediana de labios gruesos, mentón cuadrado, cara redonda, pabellones auriculares ovalados con lóbulos descendentes, bigote y barba sin rasurar.</p>
+                </div>
+              </article>
+              <article class="datos-particular uk-comment uk-comment-primary" role="comment" hidden>
+                <header class="uk-comment-header">
+                  <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                    <div class="uk-width-expand">
+                      <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Alfredo Valencia</a></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                        <li>Particular Vinculado</li>
+                        <li>Propietario</li>
+                        <li><span uk-icon="nut"></span> Multisistemas VALCER S.A. de C.V.</li>
+                        <li><span uk-icon="location"></span>Batallón de Matamoros 84-A, Chapultepec Sur, C.P. 58260, Morelia, Michoacán</li>
+                        <li><span uk-icon="phone"></span> 443 265 5544</li>
+                        <li><span uk-icon="mail"></span> contacto@multisis.mx</li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                <div class="uk-comment-body">
+                  <p class="uk-text-meta">Tez morena clara, cabello negro, corto, lacio, frente mediana, cejas pobladas rectas, unidas, ojos medianos iris café claro, nariz recta, de base mediana, boca mediana de labios gruesos, mentón cuadrado, cara redonda, pabellones auriculares ovalados con lóbulos descendentes, bigote y barba sin rasurar.</p>
+                </div>
+              </article>
+
+              <div><!--Botones-->
+                <button hidden class="btn-agregar-servidorpublico uk-button uk-button-default" type="button" uk-toggle="target: #form-servidorpublico; animation:  uk-animation-slide-left, uk-animation-slide-bottom"> <span class="uk-margin-small-right" uk-icon="plus"></span> A un Servidor Público </button>
+                <!--<button class="btn-continuar-sinservidorpublico uk-button uk-button-default" type="button" uk-toggle="target: #toggle-animation-multiple; animation:  uk-animation-slide-left, uk-animation-slide-bottom"> <span class="uk-margin-small-right" uk-icon="question"></span> A quien resulte responsable </button>-->
+                <button class="btn-agregar-particular uk-button uk-button-default" type="button" uk-toggle="target: #form-particular; animation:  uk-animation-slide-left, uk-animation-slide-bottom" hidden> <span class="uk-margin-small-right" uk-icon="users"></span>Agregar un particular</button>
+                <button onclick="location.href='/hechos'" class="btn-continuar-hechos uk-button uk-button-default" type="button" hidden><span class="uk-margin-small-right" uk-icon="arrow-right"></span>Continuar</button>
+              </div>
+              
+              <!--Formulario servidor público-->
+              <div id="form-servidorpublico" class="uk-grid-small" uk-grid>
+                <legend class="uk-legend">Datos del Servidor Público</legend>
+                <div class="uk-width-1-3@s">
+                  <input class="uk-input" type="text" placeholder="Nombre(s)" aria-label="Nombre(s)">
+                </div>
+                <div class="uk-width-1-3@s">
+                  <input class="uk-input" type="text" placeholder="Apellido uno" aria-label="Apellido uno">
+                </div>
+                <div class="uk-width-1-3@s">
+                  <input class="uk-input" type="text" placeholder="Apellido dos" aria-label="Apellido dos">
+                </div>
+                <div class="uk-width-1-3@s">
+                  <input class="uk-input" type="text" placeholder="Cargo o puesto" aria-label="Cargo o puesto">
+                </div>
+                <div class="uk-width-1-3@s">
+                  <input class="uk-input" type="text" placeholder="Área de adscripción" aria-label="Área de adscripción">
+                </div>
+                <div class="uk-width-1-3@s">
+                  <input class="uk-input" type="text" placeholder="Dependencia o Institución" aria-label="Dependencia o Institución">
+                </div>
+                <div class="uk-width-1-1@s">
+                  <button id="btn-guardar-servidorpublico" class="uk-button uk-button-primary uk-button-small">Guardar</button>
+                  <button id="btn-continuar-particular" class="uk-button uk-button-primary uk-button-small">Omitir servidor público</button>
+                </div>
+              </div>
+            </div>
+            
+            <!--Formulario particular-->
+            <div id="form-particular" class="uk-grid-small"  uk-grid hidden>
+              <legend class="uk-legend">Datos del Particular</legend>
+              <div class="uk-width-1-1@s"> Régimen:
+                <label>
+                  <input class="uk-radio" type="radio" name="radio2" checked>
+                  Físico</label>
+                <label>
+                  <input class="uk-radio" type="radio" name="radio2">
+                  Moral</label>
+              </div>
+              <div class="uk-width-1-3@s">
+                <input class="uk-input" type="text" placeholder="Nombre(s) del Particular" aria-label="Nombre(s)">
+              </div>
+              <div class="uk-width-1-3@s">
+                <input class="uk-input" type="text" placeholder="Apellido uno" aria-label="Apellido uno">
+              </div>
+              <div class="uk-width-1-3@s">
+                <input class="uk-input" type="text" placeholder="Apellido dos" aria-label="Apellido dos">
+              </div>
+              <div class="uk-width-1-1@s">
+                <textarea class="uk-textarea" rows="2" placeholder="En caso de no conocer su nombre, describe su media filiación o algún dato para identificarlo" aria-label="Describe su media filiación o algún dato de identificación"></textarea>
+              </div>
+              <div class="uk-width-1-2@s">
+                <input class="uk-input" type="text" placeholder="Nombre, denominación o razón social" aria-label="Nombre, denominación o razón social">
+              </div>
+              <div class="uk-width-1-2@s">
+                <input class="uk-input" type="text" placeholder="Cargo (Propietario/Socio/Director/Apoderado)" aria-label="Cargo (Propietario/Socio/Director/Apoderado)">
+              </div>
+              <div class="uk-width-1-1@s">
+                <h6 class="pde-text-anton uk-heading-line uk-text-center"><span>Dirección</span></h6>
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Calle" aria-label="Calle">
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Número exterior/interior" aria-label="Número exterior/interior">
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Colonia" aria-label="Colonia">
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Código Postal" aria-label="Código Postal">
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Teléfono (10 dígitos)" aria-label="Teléfono (10 dígitos)">
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Ciudad/Municipio" aria-label="Ciudad/Municipio">
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Estado" aria-label="Estado">
+              </div>
+              <div class="uk-width-1-4@s">
+                <input class="uk-input" type="text" placeholder="Correo electrónico" aria-label="Correo electrónico">
+              </div>
+              <div class="uk-width-1-1@s">
+                <button id="btn-guardar-particular" class="uk-button uk-button-primary uk-button-small">Guardar</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

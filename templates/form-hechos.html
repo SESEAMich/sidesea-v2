@@ -1,0 +1,94 @@
+{% extends 'base.html'%} {# Herencia #} 
+{% block content %} 
+{{ super() }}
+<div id="seccion-formulario-denuncias" class="uk-section pde-bg-1 uk-padding-small">
+    <div class="uk-container">  
+
+      <!--INICIO PASO 2-->
+      <div id="paso-dos" >
+
+        {% if datos.filacion == "no" %}
+        <!-- Op Servidor público/particular-->
+        <h3 class="pde-text-anton">2 Narra ¿cómo ocurrieron los hechos?</h3>
+        {% else %}
+        <!-- Op responsable-->
+        <h3 class="pde-text-anton">1 Narra tu denuncia</h3>
+        {% endif%}
+        
+        <!--Formulario hechos-->
+        <div id="form-hechos" class="uk-grid-small uk-margin-small-bottom" uk-grid>
+          
+          {% if datos.filacion == "si" %}
+          <div class="uk-width-1-1@s">
+            <textarea class="uk-textarea" rows="2" placeholder="Describe al servidor público o particular o agrega algún dato para identificarlo" aria-label="Describe su media filiación o algún dato de identificación"></textarea>
+          </div>
+        {% endif %}
+
+          <legend class="uk-legend">Narración de los hechos</legend>
+          <div class="uk-width-1-1@s">
+            <textarea class="uk-textarea" rows="5" placeholder="Narre los hechos de forma detallada y precisa" aria-label="Narre los hechos de forma detallada y precisa"></textarea>
+          </div>
+          <div class="uk-width-1-1@s">
+            <h6 class="pde-text-anton uk-heading-line uk-text-left"><span>Tiempo y lugar de los hechos</span></h6>
+          </div>
+          <div class="uk-width-1-3@s">
+            <div class="uk-inline" style="width: 100%"> <span class="uk-form-icon" uk-icon="icon: calendar"></span>
+              <input class="uk-input" type="text" placeholder="dd/mm/aaaa" aria-label="Not clickable icon">
+            </div>
+          </div>
+          <div class="uk-width-1-3@s">
+            <div class="uk-inline" style="width: 100%"> <span class="uk-form-icon" uk-icon="icon: clock"></span>
+              <input class="uk-input" type="text" placeholder="12:00 am" aria-label="Not clickable icon">
+            </div>
+          </div>
+          <div class="uk-width-1-3@s">
+            <input class="uk-input" type="text" placeholder="Localidad de los hechos" aria-label="Localidad de los hechos">
+          </div>
+          <div id="form-hechos-probatorios" class="uk-grid-small" uk-grid hidden>
+            <div class="uk-width-1-1@s">
+              <h6 class="pde-text-anton uk-heading-line uk-text-left"><span>Hechos probatorios</span></h6>
+            </div>
+            <div class="uk-width-1-1@s">
+              <input class="uk-input" type="text" placeholder="Escriba el nombre de los testigos seguidos por una (,)" aria-label="">
+            </div>
+            <p>Si cuentas con algún documento multimedia que acredite los hechos denunciados, cargalas a continuación:</p>
+            <div class="uk-width-1-1@s">
+              <ul id="datos-hechos-archivos" class="uk-list">
+              </ul>
+            </div>
+            <div class="uk-width-1-1@s">
+              <div class="uk-margin">
+                <div uk-form-custom="target: true">
+                  <input type="file" aria-label="Custom controls">
+                  <input class="uk-input uk-form-width-large" type="text" placeholder="Elige un archivo" aria-label="Custom controls" disabled>
+                </div>
+                <button id="btn-agregar-hechos-archivo" class="uk-button uk-button-default">Subir archivo</button>
+              </div>
+            </div>
+            <div class="uk-width-1-1@s">
+              <p>Si existe material que no tengas en tus manos descríbelos a continuación:</p>
+            </div>
+            <div class="uk-width-1-2@s">
+              <input class="uk-input" type="text" placeholder="Describa el o los documentos" aria-label="">
+            </div>
+            <div class="uk-width-1-2@s">
+              <input class="uk-input" type="text" placeholder="Dónde se localizan esos documentos" aria-label="">
+            </div>
+          </div>
+        </div>
+        
+        <!--Botones-->
+        <div>
+          <button class="btn-agregar-hechos uk-button uk-button-default" type="button"> <span class="uk-margin-small-right" uk-icon="plus"></span> Agregar hechos probatorios </button>
+          <button class="btn-continuar-terminardenuncia uk-button uk-button-default" type="button" onclick="location.href='/denuncia-resumen'"> <span class="uk-margin-small-right" uk-icon="arrow-right"></span> Terminar denuncia </button>
+        </div>
+      </div>
+      
+      <!--FIN PASO 2--> 
+      
+      
+     
+      
+    </div>
+  </div>
+  {% endblock %}

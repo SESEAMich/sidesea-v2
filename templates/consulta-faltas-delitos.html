@@ -1,0 +1,752 @@
+{% extends 'base.html'%} {# Herencia #}
+
+{% block content %}
+{{ super() }}
+<div class="uk-section pde-bg-1 uk-padding-small">
+    <div class="uk-container">
+        <div uk-grid>
+            <div class="uk-width-auto@m">
+                <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade" uk-switcher  {% if datos.tipo == 'delitos' %}active='3'{% endif %}>                   
+                    <li><a href="#">Faltas administrativas<br> no graves</a></li>
+                    <li><a href="#">Faltas administrativas<br> graves</a></li>
+                    <li><a href="#">Actos de particulares<br> vinculados con faltas<br> administrativas graves</a></li>
+                    <li><a href="#">Delitos por Hechos de<br> Corrupción, en que pueden<br> incurrir las y los
+                            servidores<br>públicos</a></li>
+                </ul>
+            </div>
+            <div class="uk-width-expand@m">
+                <ul id="component-tab-left" class="uk-switcher">
+                    <li>
+                        <h3>Faltas administrativas no graves</h3>
+                        <p>De conformidad con lo previsto en el artículo 49, de la Ley de Responsabilidades
+                            Administrativas para el Estado de Michoacán de Ocampo (LRAEMO), se consideran como faltas
+                            administrativas no graves de los servidores públicos, las siguientes:</p>
+                        <div class="uk-child-width-1-3@s uk-text-center uk-grid-small" uk-grid="masonry: true">
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">1</h3>
+                                    <p>No cumplir con las <mark>funciones, atribuciones y comisiones</mark>
+                                        encomendadas.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">2</h3>
+                                    <p>No observar <mark>disciplina y respeto</mark> en sus funciones.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">3</h3>
+                                    <p>No denunciar actos u omisiones que se conozcan o adviertan en ejercicio de sus
+                                        funciones.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">4</h3>
+                                    <p>No atender instrucciones de sus superiores, relacionadas con el servicio público.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">5</h3>
+                                    <p>No presentar en tiempo y forma las declaraciones de situación patrimonial y de
+                                        intereses que le correspondan.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">6</h3>
+                                    <p>No registrar, integrar, custodiar y cuidar la documentación e información que
+                                        tenga bajo su responsabilidad; ni evitar su sustracción, distracción o mal uso.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">7</h3>
+                                    <p>No rendir cuentas sobre el ejercicio de sus funciones.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">8</h3>
+                                    <p>No colaborar en los procedimientos judiciales y administrativos en los que sea
+                                        parte.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">9</h3>
+                                    <p>No verificar, para poder realizar la contratación de adquisiciones,
+                                        arrendamientos, servicios o enajenación de bienes, que el contratante no
+                                        desempeñe empleo, cargo o comisión en el servicio público o, en su caso, que no
+                                        exista Conflicto de Interés.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">10</h3>
+                                    <p>No entregar los informes trimestrales relativos a la Cuenta Pública.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                                    <h3 class="uk-card-title">11</h3>
+                                    <p>Causar daños y perjuicios, de manera culposa o negligente, a la Hacienda Pública
+                                        o al patrimonio de un Órgano del Estado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Faltas administrativas graves</h3>
+                        <p>De conformidad con lo previsto en el Capítulo II, del Título Tercero, de la Ley de
+                            Responsabilidades Administrativas para el Estado de Michoacán de Ocampo (LRAEMO), se
+                            consideran faltas administrativas graves de los servidores públicos, las siguientes:</p>
+                        <div class="uk-background-muted uk-padding-small">
+                            <ul uk-accordion="collapsible: false">
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Cohecho</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurrirá en cohecho, la o el servidor público que exija, acepte, obtenga o
+                                            pretenda obtener, por sí o a través de terceros, con motivo de sus
+                                            funciones, cualquier beneficio no comprendido en su remuneración como
+                                            servidor público, que podría consistir en dinero; valores; bienes muebles o
+                                            inmuebles, incluso mediante enajenación en precio notoriamente inferior al
+                                            que se tenga en el mercado; donaciones; servicios; empleos y demás
+                                            beneficios indebidos para sí o para su cónyuge, parientes consanguíneos,
+                                            parientes civiles o para terceros con los que tenga relaciones
+                                            profesionales, laborales o de negocios o para socios o sociedades de la o el
+                                            Servidor Público o las personas antes referidas formen parte. (Artículo 52
+                                            de la LRAEMO).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Peculado</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Cometerá peculado la o el servidor público que autorice, solicite o realice
+                                            actos para el uso o apropiación para sí o para su cónyuge, parientes
+                                            consanguíneos, parientes civiles o para terceros con los que tenga
+                                            relaciones profesionales, laborales o de negocios o para socios o sociedades
+                                            de la o el Servidor público o las personas referidas forme parte, de
+                                            recursos públicos, sean materiales, humanos o financieros, sin fundamento
+                                            jurídico o en contraposición a las normas aplicables. (Artículo 53 de la
+                                            LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Desvío de recursos</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Será responsable de desvío de recursos públicos la o el servidor público que
+                                            autorice, solicite o realice actos para la asignación o desvío de recursos
+                                            públicos, sean materiales, humanos o financieros, sin fundamento jurídico o
+                                            en contraposición a las normas aplicables. (Artículo 54 de la LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Utilización indebida de la información</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurrirá en utilización indebida de información la o el servidor público que
+                                            adquiera para sí o para su cónyuge, parientes consanguíneos, parientes
+                                            civiles o para terceros con los que tenga relaciones profesionales,
+                                            laborales o de negocios o para socios o sociedades de la o el Servidor
+                                            Público o las personas antes referidas formen parte, bienes inmuebles,
+                                            muebles y valores que pudieren incrementar su valor o, en general, que
+                                            mejoren sus condiciones, así como obtener cualquier ventaja o beneficio
+                                            privado, como resultado de información privilegiada de la cual haya tenido
+                                            conocimiento. (Artículo 55 LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Abuso de funciones</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurrirá en abuso de funciones la o el servidor público que ejerza
+                                            atribuciones que no tenga conferidas o se valga de las que tenga, para
+                                            realizar o inducir actos u omisiones arbitrarios, para generar un beneficio
+                                            para sí o para su cónyuge, parientes consanguíneos, parientes civiles o para
+                                            terceros con los que tenga relaciones profesionales, laborales o de negocios
+                                            o para socios o sociedades de la o el Servidor Público o las personas antes
+                                            referidas formen parte, o para causar perjuicio a alguna persona o al
+                                            servicio público; así como cuando realiza por sí o a través de un tercero,
+                                            alguna de las conductas descritas en el artículo 9 Bis de la Ley por una
+                                            Vida Libre de Violencia para las Mujeres en el Estado de Michoacán de
+                                            Ocampo. (Artículo 57 LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Conflicto de interés</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurre en actuación bajo Conflicto de Interés la o el servidor público que
+                                            intervenga por motivo de su empleo, cargo o comisión en cualquier forma, en
+                                            la atención, tramitación o resolución de asuntos en los que tenga interés
+                                            personal o impedimento legal.</p>
+
+                                        <p>Al tener conocimiento de los asuntos mencionados en el párrafo anterior, la o
+                                            el Servidor Público informará tal situación a la o el jefe inmediato o al
+                                            órgano que determine las disposiciones aplicables de los Órganos del Estado,
+                                            solicitando sea excusado de participar en cualquier forma en la atención,
+                                            tramitación o resolución de los mismos.</p>
+
+                                        <p>Será obligación del jefe inmediato determinar y comunicarle a la o el
+                                            servidor público, a más tardar 48 horas antes del plazo establecido para
+                                            atender el asunto en cuestión, los casos en que no sea posible abstenerse de
+                                            intervenir en los asuntos, así como establecer instrucciones por escrito
+                                            para la atención, tramitación o resolución imparcial y objetiva de dichos
+                                            asuntos. (Artículo 58 LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Contratación indebida</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Será responsable de contratación indebida la o el servidor público que
+                                            autorice cualquier tipo de contratación, así como la selección, nombramiento
+                                            o designación, de quien se encuentre impedido por disposición legal o
+                                            inhabilitado por resolución de autoridad competente para ocupar un empleo,
+                                            cargo o comisión en el servicio público o inhabilitado para realizar
+                                            contrataciones con los Órganos del Estado siempre que en el caso de las
+                                            inhabilitaciones, al momento de la autorización, éstas se encuentren
+                                            inscritas en el Sistema Nacional de Servidores Públicos y Particulares
+                                            Sancionados de la Plataforma Digital Estatal. (Artículo 59 de la LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Enriquecimiento oculto u ocultamiento de
+                                        Conflicto de Interés</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurrirá en enriquecimiento oculto u ocultamiento de Conflicto de Interés la
+                                            o el servidor público que falte a la veracidad en la presentación de las
+                                            declaraciones de situación patrimonial o de intereses, que tenga como fin
+                                            ocultar, respectivamente, el incremento en su patrimonio o el uso y disfrute
+                                            de bienes o servicios que no sea explicable o justificable, o un Conflicto
+                                            de Interés. (Artículo 60 de la LRAEMO).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Tráfico de influencias</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Cometerá tráfico de influencias la o el servidor público que utilice la
+                                            posición que su empleo, cargo o comisión le confiere para inducir a que otro
+                                            servidor público efectúe, retrase u omita realizar algún acto de su
+                                            competencia, para generar cualquier beneficio, provecho o ventaja para sí o
+                                            para su cónyuge, parientes consanguíneos, parientes civiles o para terceros
+                                            con los que tenga relaciones profesionales, laborales o de negocios o para
+                                            socios o sociedades de la o el Servidor Público o las personas antes
+                                            referidas formen parte. (Artículo 61 LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Encubrimiento</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Será responsable de encubrimiento la o el servidor público que cuando en el
+                                            ejercicio de sus funciones llegare a advertir actos u omisiones que pudieren
+                                            constituir faltas administrativas, realice deliberadamente alguna conducta
+                                            para su ocultamiento. (Artículo 62 de la LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Desacato</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Cometerá desacato la o el servidor público que, tratándose de requerimientos
+                                            o resoluciones de autoridades fiscalizadoras, de control interno,
+                                            judiciales, electorales o en materia de defensa de los derechos humanos o
+                                            cualquier otra competente, proporcione información falsa, así como no dé
+                                            respuesta alguna, retrase deliberadamente y sin justificación la entrega de
+                                            la información, a pesar de que le hayan sido impuestas medidas de apremio
+                                            conforme a las disposiciones aplicables.</p>
+
+                                        <p>Además, se tendrá por desacato cuando la o el servidor público responsable no
+                                            haga entrega de dos o más informes trimestrales o la Cuenta Pública al
+                                            Congreso, o a los responsables de su formulación, los rinda sin la totalidad
+                                            de las características señaladas por la ley y la información complementaria
+                                            que determine la Auditoría Superior de Michoacán o lo haga fuera de los
+                                            plazos legales. (Artículo 63 LRAEMO)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Obstrucción de la justicia en la
+                                        investigación, substanciación y resolución de faltas administrativas</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Las o los servidores públicos responsables de la investigación,
+                                            substanciación y resolución de las Faltas Administrativas incurrirán en
+                                            obstrucción de la justicia cuando:</p>
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>Realice cualquier acto que simule conductas no graves durante la
+                                                investigación de actos u omisiones calificados como graves en la Ley de
+                                                Responsabilidades Administrativas para el Estado de Michoacán de Ocampo
+                                                y demás disposiciones aplicables</li>
+                                            <li>Realice cualquier acto que oculte o simule los actos u omisiones
+                                                calificados como no graves en la Ley de Responsabilidades
+                                                Administrativas para el Estado de Michoacán de Ocampo y demás
+                                                disposiciones aplicables</li>
+                                            <li>No inicie el procedimiento correspondiente ante la autoridad competente,
+                                                dentro del plazo de treinta días naturales, a partir de que tengan
+                                                conocimiento de cualquier conducta que pudiera constituir una falta
+                                                administrativa grave, faltas de particulares o un acto de corrupción
+                                            </li>
+                                            <li>Revelen la identidad de un denunciante anónimo protegido bajo los
+                                                preceptos establecidos en la Ley de Responsabilidades Administrativas
+                                                para el Estado de Michoacán de Ocampo. (Artículo 64 LRAEMO)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Delitos por Hechos de Corrupción, en que pueden incurrir las y los servidores públicos</h3>
+                        <p>Conforme lo dispuesto en el Título Décimo Sexto, del Código Penal para el Estado de
+                            Michoacán, se consideran como delitos por hechos de corrupción los siguientes:</p>
+                        <div class="uk-background-muted uk-padding-small">
+                            <ul uk-accordion="collapsible: false">
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Soborno</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurre en soborno el particular que prometa, ofrezca o entregue cualquier
+                                            beneficio indebido a que se refiere la Ley de Responsabilidades
+                                            Administrativas para el Estado de Michoacán de Ocampo, a uno o varios
+                                            Servidores Públicos, directamente o a través de terceros, a cambio de que
+                                            dichos Servidores Públicos realicen o se abstengan de realizar un acto
+                                            relacionado con sus funciones o con las de otro servidor público, o bien,
+                                            abusen de su influencia real o supuesta, con el propósito de obtener o
+                                            mantener, para sí mismo o para un tercero, un beneficio o ventaja, con
+                                            independencia de la aceptación o recepción del beneficio o del resultado
+                                            obtenido. (Artículo 66 LRAEMO).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Participación ilítica en procedimientos
+                                        administrativos</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurre en participación ilícita en procedimientos administrativos el
+                                            particular que realice actos u omisiones para participar en los mismos, no
+                                            obstante que por disposición de ley o resolución de autoridad competente se
+                                            encuentre impedido o inhabilitado para ello. (Artículo 67 LRAEMO).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Tráfico de influencias</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurre en tráfico de influencias para inducir a la autoridad el particular
+                                            que use su poder económico o político, real o ficticio, sobre cualquier
+                                            servidor público, con el propósito de obtener para sí o para un tercero un
+                                            beneficio o ventaja, o para causar perjuicio a alguna persona o al servicio
+                                            público, con independencia de la aceptación de la o el servidor público o
+                                            del resultado obtenido. (Artículo 68 LRAEMO).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Utilización de información falsa</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Es responsable de utilizar información falsa el particular que presente
+                                            documentación o información falsa o alterada, o simule el cumplimiento de
+                                            requisitos o reglas establecidos en los procedimientos administrativos, con
+                                            el propósito de lograr una autorización, un beneficio, una ventaja o de
+                                            perjudicar a persona alguna.</p>
+                                        <p>Asimismo, incurre en obstrucción de facultades de investigación el particular
+                                            que, teniendo información vinculada con una investigación de Faltas
+                                            Administrativas, proporcione información falsa, retrase deliberada e
+                                            injustificadamente la entrega de la misma, o no dé respuesta alguna a los
+                                            requerimientos o resoluciones de autoridades investigadoras, substanciadoras
+                                            o resolutoras, siempre y cuando le hayan sido impuestas previamente medidas
+                                            de apremio conforme a las disposiciones aplicables. (Artículo 69 LRAEMO).
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Colusión</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Incurre en colusión el particular que ejecute con uno o más sujetos
+                                            particulares, en materia de contrataciones públicas, acciones que impliquen
+                                            o tengan por objeto o efecto obtener un beneficio o ventaja indebidos en las
+                                            contrataciones públicas de carácter local o municipal. También se
+                                            considerará colusión cuando los particulares acuerden o celebren contratos,
+                                            convenios, arreglos o combinaciones entre competidores, cuyo objeto o efecto
+                                            sea obtener un beneficio indebido u ocasionar un daño a la Hacienda Pública
+                                            o al patrimonio de los Órganos del Estado. (Artículo 70 LRAEMO).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Uso indebido de recursos públicos</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Es responsable por el uso indebido de recursos públicos el particular que
+                                            realice actos mediante los cuales se apropie, haga uso indebido o desvíe del
+                                            objeto para el que estén previstos los recursos públicos, sean materiales,
+                                            humanos o financieros, cuando por cualquier circunstancia maneje, reciba,
+                                            administre o tenga acceso a estos recursos. (Artículo 71 LRAEMO).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Contratación indebida</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Es responsable de contratación indebida de ex Servidores Públicos el
+                                            particular que contrate a quien haya sido servidor público o servidora
+                                            pública durante el año previo, que posea información privilegiada que
+                                            directamente haya adquirido con motivo de su empleo, cargo o comisión en el
+                                            servicio público, y directamente permita que el contratante se beneficie en
+                                            el mercado o se coloque en situación ventajosa frente a sus competidores.
+                                            (Artículo 72 LRAEMO).</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Delitos por Hechos de Corrupción, en que pueden incurrir las y los servidores públicos</h3>
+                        <p>Conforme lo dispuesto en el Título Décimo Sexto, del Código Penal para el Estado de
+                            Michoacán, se consideran como delitos por hechos de corrupción los siguientes:</p>
+                        <div class="uk-background-muted uk-padding-small">
+                            <ul uk-accordion="collapsible: false">
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Ejercicio ilícito de servicio público</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de ejercicio ilícito de servicio público quien:</p>
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>Se atribuya o ejerza las funciones de un empleo, cargo o comisión sin
+                                                haber tomado posesión legítima o sin llenar todos los requisitos
+                                                legales.</li>
+                                            <li>Continúe ejerciendo las funciones de un empleo, cargo o comisión después
+                                                de haberse cumplido el término por el cual se les nombró, haberse
+                                                revocado su nombramiento o habérsele suspendido o destituido legalmente.
+                                            </li>
+                                            <li>Se ostente con una comisión, empleo o cargo distintos del que realmente
+                                                tuviere.</li>
+                                            <li>Abandone la comisión, empleo o cargo sin habérsele admitido la renuncia
+                                                o concedido licencia, o antes de que se presente la persona que haya de
+                                                substituirlo.</li>
+                                            <li>Sustraiga, destruya, inutilice, oculte o utilice ilícitamente
+                                                información o documentación que se encuentre bajo su custodia o a la
+                                                cual tenga acceso.</li>
+                                            <li>Presente informes manifestando hechos o circunstancias falsos o niegue
+                                                la existencia en todo o en parte de los mismos.</li>
+                                            <li>Teniendo obligación por razones de su empleo, cargo o comisión, de
+                                                custodiar, vigilar, proteger o dar seguridad a personas, lugares,
+                                                instalaciones u objetos, incumpliendo su deber, propicie daño a las
+                                                personas o lugares, instalaciones u objetos, o pérdida o sustracción de
+                                                objetos que se encuentren bajo su cuidado.</li>
+                                            <li>Teniendo un empleo, cargo o comisión en los centros penitenciarios,
+                                                facilite o fomente la introducción, uso, consumo, posesión o comercio de
+                                                bebidas alcohólicas, sustancias psicotrópicas, así como de teléfonos
+                                                celulares, radiolocalizadores o cualquier otro instrumento de
+                                                comunicación radial o satelital para uso de los internos, así como el
+                                                ingreso de personas con fines de comercio sexual. (Artículo 241 CPEM)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Abuso de autoridad</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de abuso de autoridad la o el servidor público que:</p>
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>Para impedir la ejecución de una ley, decreto o reglamento, el cobro de
+                                                un impuesto o el cumplimiento de una resolución judicial, pida auxilio a
+                                                la fuerza pública o la emplee con ese objeto.</li>
+                                            <li>Ejerciendo sus funciones o con motivo de ellas hiciere violencia a una
+                                                persona sin causa legítima o la vejare o la insultare.</li>
+                                            <li>Indebidamente retarde o niegue a los particulares la protección o
+                                                servicio que tenga obligación de otorgarles o impida la presentación o
+                                                el curso de una solicitud.</li>
+                                            <li>Estando encargado de administrar justicia, bajo cualquier pretexto,
+                                                aunque sea el de obscuridad o silencio de la ley, se niegue
+                                                injustificadamente a despachar un negocio pendiente ante él, dentro de
+                                                los términos establecidos por la ley.</li>
+                                            <li>Siendo encargado o elemento de una fuerza pública, requerido legalmente
+                                                por una autoridad competente para que le preste auxilio se niegue a
+                                                dárselo o retrase el mismo injustificadamente. La misma previsión se
+                                                aplicará tratándose de peritos.</li>
+                                            <li>Estando encargado de cualquier establecimiento destinado a la ejecución
+                                                de las sanciones privativas de libertad, de instituciones de reinserción
+                                                social o de custodia y rehabilitación de menores y de reclusorios
+                                                preventivos o administrativos, o centros de arraigo que, sin los
+                                                requisitos legales, reciba como presa, detenida, arrestada, arraigada o
+                                                interna a una persona o la mantenga privada de su libertad, sin dar
+                                                parte del hecho a la autoridad correspondiente; niegue que está
+                                                detenida, si lo estuviere; o no cumpla la orden de libertad girada por
+                                                la autoridad competente.</li>
+                                            <li>Teniendo conocimiento de una privación ilegal de la libertad no la
+                                                denunciase inmediatamente a la autoridad competente o no la haga cesar.
+                                            </li>
+                                            <li>Haga que se le entreguen fondos, valores u otra cosa que no se le haya
+                                                confiado a él y se los apropie o disponga de ellos indebidamente.</li>
+                                            <li>Obtenga, exija o solicite sin derecho alguno o causa legítima, para sí o
+                                                para cualquier otra persona, parte del sueldo o remuneración de uno o
+                                                más de sus subalternos, dádivas u otros bienes o servicios.</li>
+                                            <li>En el ejercicio de sus funciones o con motivo de ellas, otorgue empleo,
+                                                cargo o comisión públicos, o contratos de prestación de servicios
+                                                profesionales o mercantiles o de cualquier otra naturaleza, que sean
+                                                remunerados, a sabiendas de que no se prestará el servicio para el que
+                                                se les nombró, o no se cumplirá el contrato otorgado.</li>
+                                            <li>Autorice o contrate a quien se encuentre inhabilitado por resolución
+                                                firme de autoridad competente para desempeñar un empleo, cargo o
+                                                comisión en el servicio público, o para participar en adquisiciones,
+                                                arrendamientos, servicios u obras públicas, siempre que lo haga con
+                                                conocimiento de tal situación.</li>
+                                            <li>Otorgue cualquier identificación en que se acredite como servidor
+                                                público a cualquier persona que realmente no desempeñe el empleo, cargo
+                                                o comisión a que se haga referencia en dicha identificación.</li>
+                                            <li>Obligue al inculpado a declarar, usando la incomunicación, la
+                                                intimidación, la tortura o tratos crueles, inhumanos o degradantes.</li>
+                                            <li>Se oponga o niegue a que autoridad competente tenga libre e inmediato
+                                                acceso al lugar donde haya motivos para creer que se pueda encontrar a
+                                                una persona desaparecida.</li>
+                                            <li>Omita el registro de la detención correspondiente o dilate
+                                                injustificadamente poner al detenido a disposición de la autoridad
+                                                correspondiente.</li>
+                                            <li>Incumpla con la obligación de impedir la ejecución de las conductas de
+                                                privación de la libertad. (Artículo 243 CPEM)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Desaparición forzada de personas</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de desaparición forzada de personas, la o el servidor
+                                            público o el particular que actuando con la autorización, apoyo,
+                                            consentimiento, conocimiento o dirección de aquél u otro servidor público;
+                                            detenga, arreste, aprehenda o prive de la libertad en cualquier otra forma a
+                                            una persona o facilite tal privación, seguida de la negativa a reconocer
+                                            dicha privación de la libertad o del ocultamiento del paradero de la víctima
+                                            o impida a esta el ejercicio de su derecho de protección legal y de las
+                                            garantías procesales que otorga la ley. (Artículo 243 Bis CPEM)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Coalisión de servidores públicos</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de coalición de servidores públicos, cuando la o el servidor
+                                            público se coaliguen para tomar medidas contrarias a una ley, reglamento u
+                                            otras disposiciones de carácter general, impedir su ejecución o para hacer
+                                            dimisión de sus puestos con el fin de impedir o suspender la administración
+                                            pública en cualquiera de sus ramas. No cometen este delito los trabajadores
+                                            que se coaliguen en ejercicio de sus derechos constitucionales o que hagan
+                                            uso del derecho de huelga. (Artículo 246 CPEM)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Uso ilícito de atribuciones y facultades</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de uso ilícito de atribuciones y facultades:</p>
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>La o el servidor público que ilícitamente:
+                                                <ul class="uk-list uk-list-circle">
+                                                    <li>Otorgue concesiones de prestación de servicio público o de
+                                                        explotación, aprovechamiento y uso de bienes del patrimonio del
+                                                        Estado</li>
+                                                    <li>Otorgue permisos, licencias, adjudicaciones o autorizaciones de
+                                                        contenido económico</li>
+                                                    <li>Otorgue franquicias, exenciones, deducciones o subsidios sobre
+                                                        impuestos, derechos, productos, aprovechamientos o aportaciones
+                                                        y cuotas de seguridad social, en general sobre los ingresos
+                                                        fiscales, y sobre precios y tarifas de los bienes y servicios
+                                                        producidos o prestados en la Administración Pública Estatal</li>
+                                                    <li>Otorgue, realice o contrate obras públicas, adquisiciones,
+                                                        arrendamientos, enajenaciones de bienes o servicios, con
+                                                        recursos económicos públicos;</li>
+                                                    <li>Contrate deuda o realice colocaciones de fondos y valores con
+                                                        recursos públicos.</li>
+                                                </ul>
+                                            </li>
+                                            <li>La o el servidor público que a sabiendas de la ilicitud del acto, y en
+                                                perjuicio del patrimonio o del servicio público o de otra persona:
+                                                <ul class="uk-list uk-list-circle">
+                                                    <li>Niegue el otorgamiento o contratación de las operaciones a que
+                                                        hacen referencia la presente fracción, existiendo todos los
+                                                        requisitos establecidos en la normatividad aplicable para su
+                                                        otorgamiento</li>
+                                                    <li>Siendo responsable de administrar y verificar directamente el
+                                                        cumplimiento de los términos de una concesión, permiso,
+                                                        asignación o contrato, se haya abstenido de cumplir con dicha
+                                                        obligación.</li>
+                                                </ul>
+                                            </li>
+                                            <li>La o el servidor público que teniendo a su cargo fondos públicos, les dé
+                                                una aplicación distinta de aquella a que estuvieren destinados o haga un
+                                                pago ilegal. (Artículo 247 CPEM)</li>
+                                            <li>Al particular que, en su carácter de contratista, permisionario,
+                                                asignatario, titular de una concesión de prestación de un servicio
+                                                público de explotación, aprovechamiento o uso de bienes del Patrimonio
+                                                del Estado, con la finalidad de obtener un beneficio para sí o para un
+                                                tercero:</li>
+                                            <ul class="uk-list uk-list-circle">
+                                                <li>Genere y utilice información falsa o alterada, respecto de los
+                                                    rendimientos o beneficios que obtenga.</li>
+                                                <li>Cuando estando legalmente obligado a entregar a una autoridad
+                                                    información sobre los rendimientos o beneficios que obtenga, la
+                                                    oculte. (Artículo 247 bis CPEM)</li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Intimidación</a>
+                                    <div class="uk-accordion-content">
+                                        <p>La o el servidor público, que por sí o por interpósita persona, utilizando la
+                                            violencia física o psicológica, inhiba o intimide a cualquier persona, para
+                                            evitar que ésta o un tercero denuncie, formule querella o aporte información
+                                            o pruebas relativas a la probable comisión de un delito o sobre la probable
+                                            conducta ilícita de algún servidor público. (Artículo 249 CPEM)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Ejercicio abusivo de funciones</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de ejercicio abusivo de funciones:</p>
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>La o el servidor público que en el desempeño de su empleo, cargo o
+                                                comisión, ilícitamente otorgue por sí o por interpósita persona,
+                                                contratos, concesiones, permisos, licencias, autorizaciones,
+                                                franquicias, exenciones o efectúe compras o ventas o realice cualquier
+                                                acto jurídico que produzca beneficios económicos al propio servidor
+                                                público o servidora pública, a su cónyuge, descendiente o ascendiente,
+                                                parientes por consanguinidad o afinidad hasta el cuarto grado, a
+                                                cualquier tercero con el que tenga vínculos afectivos, económicos o de
+                                                dependencia administrativa directa, socios o sociedades de las que la o
+                                                el servidor público o las personas antes referidas formen parte.</li>
+                                            <li>La o el servidor público que valiéndose de la información que posea por
+                                                razón de su empleo, cargo o comisión, sea o no materia de sus funciones,
+                                                y que no sea del conocimiento público, haga por sí, o por interpósita
+                                                persona, inversiones, enajenaciones o adquisiciones, o cualquier otro
+                                                acto que le produzca algún beneficio económico indebido a la o el
+                                                servidor público o a alguna de las personas mencionadas anteriormente.
+                                                (Consultable en el Artículo 249 bis CPEM)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Negación del servicio público</a>
+                                    <div class="uk-accordion-content">
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>Indebidamente niegue o retarde a los particulares la protección, el
+                                                auxilio o el servicio que tenga obligación de otorgarles.</li>
+                                            <li>Teniendo a su cargo elementos de la fuerza pública y habiendo sido
+                                                requerido legalmente por una autoridad competente para que le preste
+                                                auxilio, se niegue a proporcionarlo.</li>
+                                            <li>Indebidamente niegue o retarde la expedición de las órdenes de
+                                                protección emergente o preventiva, una denuncia o demanda, o cualquier
+                                                otro tipo de medida de seguridad; y, a consecuencia de esta negativa o
+                                                retardo perdiera la vida la víctima sujeta de violencia o alguno de sus
+                                                descendientes en manos de su agresor. (Consultable en el Artículo 250
+                                                CPEM)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Tráfico de incluencia</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de tráfico de influencia:</p>
+                                        <ul class="uk-list">
+                                            <li>La o el servidor público que por sí o por interpósita persona promueva o
+                                                gestione la tramitación o resolución ilícita de negocios públicos ajenos
+                                                a las responsabilidades inherentes a su empleo, cargo o comisión.</li>
+                                            <li>Cualquier persona que promueve la conducta ilícita de la o el servidor
+                                                público o se preste a la promoción o gestión a que hace referencia el
+                                                párrafo anterior.</li>
+                                            <li>El particular que, sin estar autorizado legalmente para intervenir en un
+                                                negocio público, afirme tener influencia ante los servidores públicos
+                                                facultados para tomar decisiones dentro de dichos negocios, e intervenga
+                                                ante ellos para promover la resolución ilícita de los mismos, a cambio
+                                                de obtener un beneficio para sí o para otro. (Consultable en el Artículo
+                                                251 CPEM)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Cohecho</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de cohecho:</p>
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>La o el servidor público que por sí, o por interpósita persona solicite
+                                                o reciba ilícitamente para sí o para otro, dinero o cualquier beneficio,
+                                                o acepte una promesa, para hacer o dejar de realizar un acto propio de
+                                                sus funciones inherentes a su empleo, cargo o comisión.</li>
+                                            <li>El que dé, prometa o entregue cualquier beneficio a algún servidor
+                                                público, para que haga u omita un acto relacionado con sus funciones, a
+                                                su empleo, cargo o comisión.</li>
+                                            <li>El Diputado que, en el ejercicio de sus funciones o atribuciones, y en
+                                                el marco del proceso de aprobación del presupuesto de egresos
+                                                respectivo, gestione o solicite:
+                                                <ul class="uk-list uk-list-circle">
+                                                    <li>La asignación de recursos a favor de un órgano del Estado,
+                                                        exigiendo u obteniendo, para sí o para un tercero, una comisión,
+                                                        dádiva o contraprestación, en dinero o en especie, distinta a la
+                                                        que le corresponde por el ejercicio de su encargo.</li>
+                                                    <li>El otorgamiento de contratos de obra pública o de servicios a
+                                                        favor de determinadas personas físicas o morales. (Consultable
+                                                        en el Artículo 252 CPEM)</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Cohecho activo</a>
+                                    <div class="uk-accordion-content">
+                                        <p>A quien otorgue u ofrezca dinero o cualquier otra dádiva a algún servidor
+                                            público para hacer o dejar de hacer algo relacionado con sus funciones
+                                            (Artículo 252 bis CPEM)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Peculado</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de peculado:</p>
+                                        <ul class="uk-list uk-list-hyphen">
+                                            <li>Todo servidor público que para su beneficio o el de una tercera persona
+                                                física o moral, distraiga de su objeto dinero, valores, fincas o
+                                                cualquier otra cosa perteneciente al Estado o a un particular, si por
+                                                razón de su cargo los hubiere recibido en administración, en depósito,
+                                                en posesión o por otra causa.</li>
+                                            <li>La o el servidor público que ilícitamente utilice fondos públicos u
+                                                otorgue alguno de los actos a que se refiere el apartado de uso ilícito
+                                                de atribuciones y facultades con el objeto de promover la imagen
+                                                política o social de su persona, la de su superior jerárquico o la de un
+                                                tercero, o a fin de denigrar a cualquier persona.</li>
+                                            <li>Cualquier persona que solicite o acepte realizar las promociones o
+                                                denigraciones a que se refiere el párrafo anterior, a cambio de fondos
+                                                públicos o del disfrute de los beneficios derivados de los actos a que
+                                                se refiere el apartado de uso ilícito de atribuciones y facultades.</li>
+                                            <li>Cualquier persona que sin tener el carácter de servidor público y
+                                                estando obligada legalmente a la custodia, administración o aplicación
+                                                de recursos públicos estatales, los distraiga de su objeto para usos
+                                                propios o ajenos o les dé una aplicación distinta a la que se les
+                                                destinó. (Artículo 253 CPEM)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title" href="#">Concusión</a>
+                                    <div class="uk-accordion-content">
+                                        <p>A quien teniendo la calidad de servidor público, y con tal carácter, exija
+                                            por sí o por interpósita persona a título de impuesto, derecho, aportación
+                                            de depósito o contribución, recargo, renta, rédito, salario o emolumento,
+                                            dinero, valores, servicios o cualquier otra cosa que sepa no es debida, o en
+                                            mayor cantidad de la que señala la ley. (Artículo 254 CPEM)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="uk-accordion-title">Enriquecimiento ilícito</a>
+                                    <div class="uk-accordion-content">
+                                        <p>Comete el delito de enriquecimiento Ilícito cuando la o el servidor público
+                                            no pudiere acreditar el legítimo aumento de su patrimonio o la legítima
+                                            procedencia de los bienes a su nombre o de aquellos respecto de los cuales
+                                            se conduzca como dueño. Para efectos del párrafo anterior, se computarán
+                                            entre los bienes que adquieran los servidores públicos o con respecto de los
+                                            cuales se conduzcan como dueños, los que reciban o de los que dispongan su
+                                            cónyuge y sus dependientes económicos directos, salvo que la o el servidor
+                                            público acredite que éstos los obtuvieron por sí mismos. (Artículo 254 bis
+                                            CPEM)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
